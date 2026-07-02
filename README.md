@@ -1,17 +1,20 @@
 # Category_checker
 
-Allegro REST API application (`Category_checker/1.0.0`).
+Public documentation for the **Category_checker** Allegro REST API application.
 
-## API usage
+User-Agent: `Category_checker/1.0.0 (+https://github.com/antekkalafior/Allegro_API_Overwiew)`
 
-| Endpoint | Purpose |
-|---|---|
-| `/sale/categories` | Retrieve product category tree |
-| `/sale/products` | Query catalogue products by EAN / name |
-| `/sale/product-offers/{offerId}` | Read offer details |
-| `/sale/offers` | List seller offers |
-| `/sale/shipping-rates` | Read, create and update delivery price lists |
-| `/sale/offers/{offerId}` (PATCH) | Assign shipping rate tables to offers |
-| `/billing/billing-entries` | Retrieve commission rates per category |
+## Endpoints used
 
-All operations are performed on the operator's own seller accounts.
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/sale/categories` | Retrieve category tree |
+| GET | `/sale/products` | Look up products by EAN / phrase |
+| GET | `/offers/listing` | Resolve product category from listings |
+| GET | `/sale/product-offers/{offerId}` | Read offer details |
+| GET | `/sale/offers` | List seller offers |
+| GET | `/sale/delivery-methods` | List available delivery methods |
+| GET | `/sale/shipping-rates` | Read delivery price lists |
+| POST | `/sale/shipping-rates` | Create delivery price lists |
+| PUT | `/sale/shipping-rates/{id}` | Update delivery price lists |
+| PATCH | `/sale/offers/{offerId}` | Assign shipping rate to offer |
